@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Şükür Villa - Lüks Kiralık Villa</title>
+  <link rel="nofollow" href="">
+  <link rel="nofollow" href="https://justpaste.it/redirect/ex0cv/https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Ffont-awesome%2F6.0.0-beta3%2Fcss%2Fall.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f5f5f5;
+      line-height: 1.6;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #2c3e50;
+      color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+    header .logo img {
+      height: 60px;
+    }
+    header .logo h1 {
+      font-size: 1.8em;
+      margin-left: 15px;
+    }
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    header nav ul li a {
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    header nav ul li a:hover {
+      color: #f39c12;
+    }
+    /* Hero Section */
+    #hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 100px 20px;
+      background: url('path-to-hero-image.jpg') no-repeat center center/cover;
+      color: #fff;
+      position: relative;
+    }
+    #hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    #hero .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    #hero .cta-button {
+      padding: 15px 30px;
+      background-color: #e67e22;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+    #hero .cta-button:hover {
+      background-color: #d35400;
+    }
+    /* Section Styles */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #fff;
+      margin-bottom: 20px;
+    }
+    section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #2980b9;
+    }
+    section p {
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+    #about {
+      background-color: #ecf0f1;
+    }
+    #gallery {
+      background-color: #bdc3c7;
+    }
+    #location {
+      background-color: #95a5a6;
+    }
+    #contact {
+      background-color: #7f8c8d;
+    }
+    .contact-info {
+      margin: 20px auto;
+      text-align: center;
+    }
+    .contact-info p {
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+    .contact-info a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    /* Gallery Section */
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 10px;
+    }
+    .gallery-container img {
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    /* Reservation Form Styles */
+    #contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    #contact-form input,
+    #contact-form textarea {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    #contact-form button {
+      padding: 15px;
+      background-color: #2c3e50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    #contact-form button:hover {
+      background-color: #34495e;
+    }
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2c3e50;
+      color: #fff;
+    }
+    footer p {
+      margin: 0;
+    }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header .logo img {
+        height: 50px;
+      }
+      header .logo h1 {
+        font-size: 1.5em;
+      }
+      header nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+      section h2 {
+        font-size: 2em;
+      }
+      section p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/Mert-Efe-Sukur/sukurvilla/main/Screenshot_20240730_113240_Chrome.jpg" alt="Şükür Villa Logo">
+      <h1>Şükür Villa</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="">Hakkında</a></li>
+        <li><a href="">Galeri</a></li>
+        <li><a href="">Konum</a></li>
+        <li><a href="">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section id="hero">
+    <div class="hero-content">
+      <h2>Hoş Geldiniz Şükür Villa</h2>
+      <p>Şehrin gürültüsünden uzak, huzurlu ve konforlu bir tatil için mükemmel bir seçim.</p>
+      <a href="" class="cta-button">Rezervasyon Yap</a>
+    </div>
+  </section>
+  
+  <section id="about">
+    <h2>Hakkında</h2>
+    <p>Şükür Villa, modern ve lüks tasarımı ile misafirlerine konforlu bir konaklama imkanı sunmaktadır.</p>
+    <div class="contact-info">
+      <p><strong>Instagram:</strong> <a href="https://justpaste.it/redirect/ex0cv/https%3A%2F%2Fwww.instagram.com%2Fsukurvilla" target="_blank">sukurvilla</a></p>
+      <p><strong>Email:</strong> <a href="">sukurluxvilla@gmail.com</a></p>
+    </div>
+  </section>
+  
+  <section id="gallery">
+    <h2>Galeri</h2>
+    <div class="gallery-container">
+      <img src="https://raw.githubusercontent.com/Mert-Efe-Sukur/sukurvilla/main/20220627_104628.jpg" alt="Villa Image 1">
+      <img src="https://raw.githubusercontent.com/Mert-Efe-Sukur/sukurvilla/main/20240425_121646.jpg" alt="Villa Image 2">
+      <img src="https://raw.githubusercontent.com/Mert-Efe-Sukur/sukurvilla/main/20220605_115457.jpg" alt="Villa Image 3">
+    </div>
+  </section>
+  
+  <section id="location">
+    <h2>Konum</h2>
+    <p>Villa adresi: Efeler, 09270 Didim/Aydın, Türkiye</p>
+  </section>
+  
+  <!-- Reservation Form Section -->
+  <section id="contact">
+    <h2>Rezervasyon İletişim Formu</h2>
+    <form id="contact-form">
+      <label for="name">Adınız:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="checkin">Giriş Tarihi (Check-In):</label>
+      <input type="date" id="checkin" name="checkin" required>
+
+      <label for="checkout">Çıkış Tarihi (Check-Out):</label>
+      <input type="date" id="checkout" name="checkout" required>
+
+      <label for="guests">Misafir Sayısı (Guest Count):</label>
+      <input type="number" id="guests" name="guests" min="1" required>
+
+      <label for="message">Mesajınız:</label>
+      <textarea id="message" name="message"></textarea>
+
+      <button type="submit">Gönder</button>
+    </form>
+  </section>
+  
+  <footer>
+    <p>&copy; 2024 Şükür Villa. Tüm hakları saklıdır.</p>
+  </footer>
+  
+  <script>
+    // Initialize EmailJS with your public key
+    emailjs.init("cIcj2daicL2Nro6xf");
+
+    // Handle form submission
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent default form submission
+      
+      // Send the form data using EmailJS
+      emailjs.sendForm("service_vh7x6h5", "template_p4gljfr", "#contact-form")
+        .then(function(response) {
+          console.log("SUCCESS!", response.status, response.text);
+          alert("Rezervasyon talebiniz başarıyla gönderildi!");
+          document.getElementById("contact-form").reset();
+        }, function(error) {
+          console.log("FAILED...", error);
+          alert("Gönderim başarısız oldu. Lütfen tekrar deneyin.");
+        });
+    });
+  </script>
+</body>
+</html>

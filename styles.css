@@ -1,0 +1,247 @@
+/* General Styles */  
+body {  
+    font-family: 'Roboto', sans-serif;  
+    margin: 0;  
+    padding: 0;  
+    color: #333;  
+    background-color: #f5f5f5; /* Light grey background for better contrast */  
+    line-height: 1.6;  
+}  a {
+color: inherit;
+text-decoration: none;
+}
+
+img {
+max-width: 100%;
+height: auto;
+display: block;
+}
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+background-color: #2c3e50; /* Darker header background for contrast */
+color: #fff;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+header .logo {
+display: flex;
+align-items: center;
+}
+
+header .logo img {
+height: 60px; /* Adjust as needed /
+margin-right: 15px; / Increased space between logo and title */
+}
+
+header .logo h1 {
+font-size: 1.8em;
+margin: 0;
+}
+
+header nav ul {
+list-style: none;
+display: flex;
+gap: 20px;
+}
+
+header nav ul li a {
+color: #fff;
+text-transform: uppercase;
+font-weight: bold;
+transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+color: #f39c12;
+}
+
+/* Hero Section */
+#hero {
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 100px 20px;
+background: url('path-to-hero-image.jpg') no-repeat center center/cover;
+color: #fff;
+position: relative;
+}
+
+#hero::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.5); /* Darker overlay for better text readability */
+}
+
+#hero .hero-content {
+position: relative;
+z-index: 1;
+}
+
+#hero .cta-button {
+padding: 15px 30px;
+background-color: #e67e22; /* Updated button color */
+color: #fff;
+text-decoration: none;
+border-radius: 5px;
+font-size: 18px;
+margin-top: 20px;
+transition: background-color 0.3s;
+}
+
+#hero .cta-button:hover {
+background-color: #d35400; /* Darker button color on hover */
+}
+
+/* Section Styles */
+section {
+padding: 60px 20px;
+text-align: center;
+background-color: #fff;
+margin-bottom: 20px;
+}
+
+section h2 {
+font-size: 2.5em;
+margin-bottom: 20px;
+color: #2980b9;
+}
+
+section p {
+font-size: 1.2em;
+max-width: 800px;
+margin: 0 auto 40px;
+line-height: 1.6;
+}
+
+#about {
+background-color: #ecf0f1; /* Light background for contrast */
+}
+
+#gallery {
+background-color: #bdc3c7; /* Lighter grey for gallery section */
+}
+
+#location {
+background-color: #95a5a6; /* Slightly darker grey for location section */
+}
+
+#contact {
+background-color: #7f8c8d; /* Even darker grey for contact section */
+}
+
+.contact-info {
+margin-top: 20px;
+text-align: center; /* Center-align contact info */
+}
+
+.contact-info p {
+font-size: 1.1em;
+margin: 10px 0;
+}
+
+.contact-info a {
+color: #3498db; /* Use a contrasting color */
+text-decoration: none;
+}
+
+.contact-info a:hover {
+text-decoration: underline;
+}
+
+/* Gallery Section */
+.gallery-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 10px;
+}
+
+.gallery-container img {
+border: 2px solid #ddd;
+border-radius: 10px;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-container img:hover {
+transform: scale(1.05);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+#contact-form {
+display: flex;
+flex-direction: column;
+gap: 15px;
+max-width: 500px;
+margin: 0 auto;
+}
+
+#contact-form input, #contact-form textarea {
+padding: 15px;
+border: 1px solid #ddd;
+border-radius: 5px;
+font-size: 16px;
+}
+
+#contact-form button {
+padding: 15px;
+background-color: #2c3e50; /* Updated button color */
+color: #fff;
+border: none;
+border-radius: 5px;
+font-size: 18px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+background-color: #34495e; /* Darker button color on hover */
+}
+
+/* Footer Styles /
+footer {
+text-align: center;
+padding: 20px;
+background-color: #2c3e50; / Footer background color */
+color: #fff;
+}
+
+footer p {
+margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+header .logo img {
+height: 50px;
+}
+
+header .logo h1 {  
+    font-size: 1.5em;  
+}  
+
+header nav ul {  
+    flex-direction: column;  
+    gap: 10px;  
+}  
+
+section h2 {  
+    font-size: 2em;  
+}  
+
+section p {  
+    font-size: 1em;  
+}
+
+}
