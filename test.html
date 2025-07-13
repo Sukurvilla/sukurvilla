@@ -14,213 +14,99 @@
       background-color: #f5f5f5;
       line-height: 1.6;
     }
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background-color: #2c3e50;
-      color: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px; background-color: #2c3e50; color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
     }
-    header .logo {
-      display: flex;
-      align-items: center;
-    }
-    header .logo img {
-      height: 60px;
-    }
-    header .logo h1 {
-      font-size: 1.8em;
-      margin-left: 15px;
-    }
-    header nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
+    header .logo { display: flex; align-items: center; }
+    header .logo img { height: 60px; }
+    header .logo h1 { font-size: 1.8em; margin-left: 15px; }
+    header nav ul { list-style: none; display: flex; gap: 20px; }
     header nav ul li a {
-      color: #fff;
-      text-transform: uppercase;
-      font-weight: bold;
-      transition: color 0.3s;
+      text-transform: uppercase; font-weight: bold; transition: color 0.3s;
     }
-    header nav ul li a:hover {
-      color: #f39c12;
-    }
-    /* Hero Section */
+    header nav ul li a:hover { color: #f39c12; }
+
     #hero {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 100px 20px;
-      background: url('path-to-hero-image.jpg') no-repeat center center/cover;
-      color: #fff;
-      position: relative;
+      display: flex; justify-content: center; align-items: center;
+      text-align: center; padding: 100px 20px;
+      background: url('path-to-hero-image.jpg') no-repeat center/cover;
+      color: #fff; position: relative;
     }
     #hero::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
       background: rgba(0, 0, 0, 0.5);
     }
-    #hero .hero-content {
-      position: relative;
-      z-index: 1;
-    }
+    #hero .hero-content { position: relative; z-index: 1; }
     #hero .cta-button {
-      padding: 15px 30px;
-      background-color: #e67e22;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 18px;
-      margin-top: 20px;
+      padding: 15px 30px; background-color: #e67e22; color: #fff;
+      border-radius: 5px; font-size: 18px; margin-top: 20px;
       transition: background-color 0.3s;
     }
-    #hero .cta-button:hover {
-      background-color: #d35400;
-    }
-    /* Section Styles */
+    #hero .cta-button:hover { background-color: #d35400; }
+
     section {
-      padding: 60px 20px;
-      text-align: center;
-      background-color: #fff;
+      padding: 60px 20px; text-align: center; background-color: #fff;
       margin-bottom: 20px;
     }
-    section h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: #2980b9;
-    }
+    section h2 { font-size: 2.5em; margin-bottom: 20px; color: #2980b9; }
     section p {
-      font-size: 1.2em;
-      max-width: 800px;
-      margin: 0 auto 40px;
+      font-size: 1.2em; max-width: 800px; margin: 0 auto 40px;
     }
-    #about {
-      background-color: #ecf0f1;
-    }
-    #gallery {
-      background-color: #bdc3c7;
-    }
-    #location {
-      background-color: #95a5a6;
-    }
-    #contact {
-      background-color: #7f8c8d;
-    }
-    .contact-info {
-      margin: 20px auto;
-      text-align: center;
-    }
-    .contact-info p {
-      font-size: 1.1em;
-      margin: 10px 0;
-    }
-    .contact-info a {
-      color: #3498db;
-      text-decoration: none;
-    }
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-    /* Gallery Section */
+    #about { background-color: #ecf0f1; }
+    #gallery { background-color: #bdc3c7; }
+    #location { background-color: #95a5a6; }
+    #contact { background-color: #7f8c8d; }
+
+    .contact-info { margin: 20px auto; text-align: center; }
+    .contact-info p { font-size: 1.1em; margin: 10px 0; }
+    .contact-info a:hover { text-decoration: underline; }
+
     .gallery-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 10px;
     }
     .gallery-container img {
-      border: 2px solid #ddd;
-      border-radius: 10px;
+      border: 2px solid #ddd; border-radius: 10px;
       transition: transform 0.3s, box-shadow 0.3s;
     }
     .gallery-container img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05); box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    /* Reservation Form Styles */
+
     #contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 500px;
-      margin: 0 auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
+      display: flex; flex-direction: column; gap: 15px;
+      max-width: 500px; margin: 0 auto; background: #fff;
+      padding: 20px; border-radius: 10px;
     }
-    #contact-form label {
-      text-align: left;
-      font-weight: bold;
-    }
+    #contact-form label { font-weight: bold; text-align: left; }
     #contact-form input,
     #contact-form textarea {
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 16px;
-      width: 100%;
+      padding: 15px; border: 1px solid #ddd;
+      border-radius: 5px; font-size: 16px; width: 100%;
       box-sizing: border-box;
     }
     #contact-form button {
-      padding: 15px;
-      background-color: #2c3e50;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: background-color 0.3s;
+      padding: 15px; background-color: #2c3e50; color: #fff;
+      border: none; border-radius: 5px; font-size: 18px;
+      cursor: pointer; transition: background-color 0.3s;
     }
-    #contact-form button:hover {
-      background-color: #34495e;
-    }
-    /* Footer Styles */
+    #contact-form button:hover { background-color: #34495e; }
+
     footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #2c3e50;
-      color: #fff;
+      text-align: center; padding: 20px; background-color: #2c3e50; color: #fff;
     }
-    footer p {
-      margin: 0;
-    }
-    /* Responsive Design */
+
     @media (max-width: 768px) {
-      header .logo img {
-        height: 50px;
-      }
-      header .logo h1 {
-        font-size: 1.5em;
-      }
-      header nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-      section h2 {
-        font-size: 2em;
-      }
-      section p {
-        font-size: 1em;
-      }
+      header .logo img { height: 50px; }
+      header .logo h1 { font-size: 1.5em; }
+      header nav ul { flex-direction: column; gap: 10px; }
+      section h2 { font-size: 2em; }
+      section p { font-size: 1em; }
     }
   </style>
 </head>
@@ -301,26 +187,21 @@
   </footer>
 
   <script>
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzJWgTkRcXFLQVoZINxohfLqb-zAgklqT18pJkhfz0cgYJaJmsSlNtHkkZ1aJXodkHK/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby8QhU9Rnp2rEQYThW2cgjtL87LlGG23IG150dts3kT1-a_zARKZRbGQ0srD9ffmPKG/exec';
 
     document.getElementById('contact-form').addEventListener('submit', async function(e) {
       e.preventDefault();
-      const data = {
+      const qs = new URLSearchParams({
         name:     this.name.value,
         email:    this.email.value,
         checkin:  this.checkin.value,
         checkout: this.checkout.value,
         guests:   this.guests.value,
         message:  this.message.value
-      };
+      }).toString();
 
       try {
-        const resp = await fetch(SCRIPT_URL, {
-          method:  'POST',
-          mode:    'cors',
-          headers: { 'Content-Type': 'application/json' },
-          body:    JSON.stringify(data)
-        });
+        const resp = await fetch(`${SCRIPT_URL}?${qs}`);
         const result = await resp.json();
         if (result.status === 'success') {
           alert('Rezervasyonunuz takvime eklendi! 🎉');
@@ -335,4 +216,4 @@
     });
   </script>
 </body>
-  </html>
+</html>
