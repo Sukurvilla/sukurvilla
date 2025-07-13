@@ -1,1 +1,1 @@
-[Website](https://mert-efe-sukur.github.io/sukurvilla)
+[Website](https://sukurvilla.github.io/sukurvilla/)
